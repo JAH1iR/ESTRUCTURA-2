@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture y source - art direction</title>
+    <style>
+        img { width: 100%; max-width: 400px; }
+    </style>
+</head>
+<body>
+    <!--
+        PICTURE: permite múltiples fuentes de imagen según condiciones (media queries).
+        SOURCE: define una fuente alternativa.
+        IMG: imagen por defecto (obligatorio al final).
+    -->
+    <h1>Picture: imagen según ancho de pantalla</h1>
+    <picture>
+        <source srcset="img/paisaje-grande.jpg" media="(min-width: 800px)">
+        <source srcset="img/paisaje-mediano.jpg" media="(min-width: 400px)">
+        <img src="img/paisaje-pequeno.jpg" alt="Paisaje">
+    </picture>
+</body>
+</html>

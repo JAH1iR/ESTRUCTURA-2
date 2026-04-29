@@ -1,0 +1,14 @@
+body{
+    background-color: #959393;
+    font-family: Arial, sans-serif;
+}
+header{
+    background-color: #3228b7;
+    padding: 20px 0;
+    grid-template-columns: max-content auto;
+}
+.header container{
+    display: grid;
+    align-items: center;
+    gap: 20px;
+}

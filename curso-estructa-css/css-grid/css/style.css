@@ -1,0 +1,68 @@
+*{ /*selector universal que aplica a todos los elementos del documento*/
+    margin: 0;/*elimina el margen predeterminado de todos los elementos*/
+    padding: 0;/*elimina el relleno predeterminado de todos los elementos*/
+    box-sizing: border-box; /*establece el modelo de caja para todos los elementos*/
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d1cbcb;
+    font-size: 1.2em;/*establece el tamaño de fuente para el cuerpo del documento*/
+    min-height: 100vh;
+    padding: 20px;
+}
+.grid-container > * {
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:11px ;
+   padding: 10px;
+   text-align: center;
+   font-weight: 500;
+}
+.grid-container {/*usamos css anidado para definir estilos específicos para el contenedor de la cuadrícula*/
+    display: grid;/*establece el contenedor como una cuadrícula CSS*/
+    gap:10px;/*establece el espacio entre los elementos de la cuadrícula*/;
+    grid-template: "header" 200px
+                   "nav"50px
+                   "main"100px
+                   "aside" 
+                   "footer";/*define la estructura de la cuadrícula con áreas nombradas y una columna de ancho flexible*/
+
+
+   .header {
+        grid-area: header;/*asigna el área de la cuadrícula para el elemento con la clase "header"*/
+        background-color: blue;
+    }
+    .nav {
+            grid-area: nav;
+            background-color: #6f0d0d;
+        }
+    .main {
+            grid-area: main;
+            background-color: #0d6f6f;
+        }
+    .aside {
+            grid-area: aside;
+            background-color: #6f0d6f;
+        }
+    .footer {
+            grid-area: footer;
+            background-color: #6f6f0d;
+        }
+
+        @media (max-width: 768px) {/*consulta de medios para pantallas con un ancho máximo de 768px, comúnmente utilizado para dispositivos móviles*/
+        grid-template: 
+        "header nav " 50px
+        "header nav " 50px
+        "aside main " auto
+        "footer footer "100px /
+        100px auto;/*redefine la estructura de la cuadrícula para adaptarse a pantallas más pequeñas, con dos columnas y filas ajustadas automáticamente*/
+        }
+        @media (max-width: 992px){
+        grid-template:
+        "header header header " 100px
+        "nav main aside " auto
+        "footer footer footer" 100px
+        /
+        200px auto 200px ;
+        }
+}
+    

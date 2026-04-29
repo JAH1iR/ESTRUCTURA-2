@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas HTML avanzadas</title>
+    <style>
+        table, th, td { border: 1px solid gray; border-collapse: collapse; padding: 8px; text-align: center; }
+        caption { font-size: 1.5rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <!--
+        ESTRUCTURA DE TABLA:
+        - table: contenedor.
+        - caption: título.
+        - colgroup / col: para estilizar columnas.
+        - thead: cabecera (con th).
+        - tbody: cuerpo (con td).
+        - tfoot: pie.
+        - rowspan: fusionar filas.
+        - colspan: fusionar columnas.
+    -->
+    <h1>Horario de clases</h1>
+    <table>
+        <caption>Horario Semanal</caption>
+        <colgroup>
+            <col span="1" style="background-color: lightblue;">
+            <col span="5" style="background-color: lightyellow;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>08:30 - 09:30</td><td>Matemáticas</td><td>Lengua</td><td>Historia</td><td>Matemáticas</td><td>Inglés</td></tr>
+            <tr><td>09:30 - 10:25</td><td>Lengua</td><td>Matemáticas</td><td>Ciencias</td><td>Lengua</td><td>Matemáticas</td></tr>
+            <tr><td colspan="6">Recreo</td></tr>
+            <tr><td>11:45 - 12:40</td><td>Inglés</td><td>Educ. Física</td><td>Arte</td><td>Música</td><td>Historia</td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="5">Total de horas semanales</td><td>20h</td></tr>
+        </tfoot>
+    </table>
+</body>
+</html>

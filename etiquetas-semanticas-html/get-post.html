@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envío GET vs POST</title>
+</head>
+<body>
+    <!--
+        GET: los datos se envían en la URL (visible, limitado, para consultas).
+        POST: los datos se envían en el cuerpo de la petición (más seguro, sin límite).
+        Atributo method en <form>.
+    -->
+    <form action="enviar.html" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br>
+        <input type="submit" value="Enviar con POST">
+    </form>
+    <hr>
+    <form action="enviar.html" method="get">
+        <label for="nombre2">Nombre (GET):</label>
+        <input type="text" id="nombre2" name="nombre2"><br>
+        <input type="submit" value="Enviar con GET">
+    </form>
+</body>
+</html>

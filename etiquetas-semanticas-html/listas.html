@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas en HTML</title>
+</head>
+<body>
+    <!--
+        TIPOS DE LISTAS:
+        - ul: lista desordenada (disc, circle, square).
+        - ol: lista ordenada (1, A, a, I, i). Atributos: type, start.
+        - dl: lista de definición (dt: término, dd: descripción).
+        - Se pueden anidar.
+    -->
+    <h1>Lista desordenada (ul)</h1>
+    <ul type="square">
+        <li>Pan</li>
+        <li>Leche</li>
+        <li>Huevos</li>
+    </ul>
+
+    <h1>Lista ordenada (ol)</h1>
+    <ol type="I" start="3">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h1>Lista anidada</h1>
+    <ol>
+        <li>HTML
+            <ul>
+                <li>Estructura</li>
+                <li>Etiquetas</li>
+            </ul>
+        </li>
+        <li>CSS</li>
+    </ol>
+
+    <h1>Lista de definición (dl)</h1>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado para estructura.</dd>
+        <dt>CSS</dt>
+        <dd>Lenguaje de estilos.</dd>
+    </dl>
+</body>
+</html>

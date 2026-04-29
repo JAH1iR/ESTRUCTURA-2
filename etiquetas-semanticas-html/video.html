@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video en HTML5</title>
+    <style>
+        video { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <!--
+        VIDEO: inserta video.
+        - src: ruta.
+        - controls: controles.
+        - autoplay: reproducción automática (recomendado con muted).
+        - muted: sin sonido.
+        - loop: cíclico.
+        - poster: imagen de previsualización.
+    -->
+    <h1>Reproductor de video</h1>
+    <video src="video/ejemplo.mp4" controls muted loop poster="imagen/poster.jpg">
+        Tu navegador no soporta video HTML5.
+    </video>
+</body>
+</html>

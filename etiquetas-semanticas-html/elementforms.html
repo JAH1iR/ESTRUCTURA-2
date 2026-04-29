@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más elementos de formulario</title>
+</head>
+<body>
+    <!--
+        - fieldset: agrupa elementos del formulario.
+        - legend: título del fieldset.
+        - input type="file": para subir archivos.
+        - meter: representa un valor dentro de un rango conocido.
+        - progress: progreso de una tarea.
+        - textarea: área de texto multilínea.
+    -->
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre"><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos">
+        </fieldset>
+
+        <div><label>Subir archivo: <input type="file"></label></div>
+
+        <label>Nivel de combustible (meter):</label>
+        <meter value="60" min="0" max="100" low="30" high="75" optimum="50"></meter><br>
+
+        <label>Progreso de tarea (progress):</label>
+        <progress value="75" max="100"></progress><br>
+
+        <label>Mensaje (textarea):</label>
+        <textarea name="mensaje" rows="5" cols="30" placeholder="Escribe aquí..."></textarea>
+    </form>
+</body>
+</html>
