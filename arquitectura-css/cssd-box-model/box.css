@@ -1,0 +1,12 @@
+*{ /*selector universal que aplica a todos los elementos del documento*/
+    margin: 0;/*elimina el margen predeterminado de todos los elementos*/
+    padding: 0;/*elimina el relleno predeterminado de todos los elementos*/
+    box-sizing: border-box; /*establece el modelo de caja para todos los elementos*/
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d1cbcb;
+    font-size: 1.2em;/*establece el tamaño de fuente para el cuerpo del documento*/
+    min-height: 100vh;
+    padding: 20px;
+    }
