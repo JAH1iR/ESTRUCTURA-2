@@ -5,7 +5,7 @@ let nombre;
 let Nombre = 'Eric';
 var _nombre = 'floky';
 var NOMBRE = 'Elizabeth';
-var $_nombre = 'Antonio';
+var $_nombre = 'jair';
 nombre = 'papin';
 
 document.writeln(Nombre);
