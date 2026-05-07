@@ -11,7 +11,7 @@ Repositorio dedicado al estudio y práctica de fundamentos web, estructurado por
 
 ### Lógica y Estructura (HTML/JS)
 * **html**: Desarrollo de la estructura semántica y marcado de documentos.
-* **js**: Ejercicios de lógica de programación, sintaxis y manipulación de elementos.
+* **js**: Ejercicios de lógica de programación, sintaxis.
 * **js-del-profe**: Recursos externos, ejemplos de clase y guías proporcionadas por el profe.
 
 ### Componentes y Semántica

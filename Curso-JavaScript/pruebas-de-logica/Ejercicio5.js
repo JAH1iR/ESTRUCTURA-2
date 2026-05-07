@@ -8,7 +8,7 @@ Extra: Usa el operador de identidad estricta (===) para verificar si el promedio
 
 const indice = 1.0;
 let miIndice = 0.0;
-miIndice = parseInt(prompt('ingrese su indice: '));
+miIndice = parseFloat(prompt('ingrese su indice: '));
 if (miIndice >= 1.0){
     document.writeln(`<strong>Matrícula permitida</strong>`);
 }
