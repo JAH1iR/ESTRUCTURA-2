@@ -4,13 +4,13 @@ Este documento detalla la jerarquía y el propósito de cada directorio dentro d
 
 ## 📁 Clasificación de Directorios
 
-### 1. archivos-guias (Carpeta-principal) (`archivos-guias`)
+### 1. archivos-guias (Carpeta-principal) 
 Carpeta destinada al almacenamiento de recursos académicos y guías de consulta rápida brindados por el profe:
 * **html-profe**: Ejemplos prácticos y documentación sobre la estructura base de documentos HTML.
 * **JS-profe**: Material de referencia sobre sintaxis, lógica en JavaScript.
 * **html-semantico**: Guía sobre el uso de etiquetas de estructura (header, main, footer).
 
-### 2. Arquitectura CSS (Carpeta-principal) (`arquitectura-css`)
+### 2. Arquitectura CSS (Carpeta-principal)
 Módulos técnicos enfocados en el control visual y la maquetación profesional:
 * **css-box-model**: Pruebas de concepto sobre el modelo de caja (margen, borde, relleno y contenido). Es la base para entender cómo los elementos ocupan espacio en la pantalla.
 * **css-flexbox**: Implementación de layouts flexibles para la distribución de elementos en una sola dimensión (filas o columnas).
@@ -19,7 +19,7 @@ Módulos técnicos enfocados en el control visual y la maquetación profesional:
 
 
 
-### 3. curso de JavaScript (Carpeta-principal) (`Curso-JavaScript`)
+### 3. curso de JavaScript (Carpeta-principal) 
 * **html**: contiene el index con el link del scrip de donde invocamos nuestro archivos de js.
 * **js**: Espacio dedicado al desarrollo de scripts nativos,
 * **prubas-de-logica**: ejercicios de aplicacion basados en los ejemplos y guias.
