@@ -1,31 +1,20 @@
- // --- DIFERENCIAS ENTRE VAR Y LET ---
+// ==========================================
+// TEMA 1: VARIABLES Y TIPOS DE DATOS
+// ==========================================
 
- // 1. VAR (Ámbito Global/Función)
- // 'var' no respeta los bloques (como los de un 'if'). Si declaras algo con var dentro, se sale.
- var lenguaje = "JavaScript";
- if (true) {
-     var lenguaje = "java"; // Esto sobrescribe la variable de afuera
-     document.writeln(`Dentro del IF con var: ${lenguaje}`);
-     document.writeln('<br>');
- }
- document.writeln(`Fuera del IF con var: ${lenguaje} (¡Cambió el original!)`);
- document.writeln('<br><br>');
+// RETO: Declara las siguientes variables según el tipo de dato comentado:
 
- // 2. LET (Ámbito de Bloque) - RECOMENDADO
- // 'let' solo vive dentro de las llaves { } donde fue creado.
- let herramienta = "Martillo";
- if (true) {
-     let herramienta = "Destornillador"; // Es una variable DIFERENTE, solo vive aquí adentro
-     document.writeln(`Dentro del IF con let: ${herramienta}`);
-     document.writeln('<br>');
- }
- document.writeln(`Fuera del IF con let: ${herramienta} (Mantiene su valor original)`);
- document.writeln('<br><br>');
+// 1. Tu nombre completo (debe ser un String)
+const nombreCompleto = "Erick Bocanegra";
 
- // Explicación de la sintaxis ${variable} que preguntaste:
- // Se llama INTERPOLACIÓN. 
- // En vez de escribir: "Texto " + variable + " texto"
- // Escribes: `Texto ${variable} texto` (usando las comillas invertidas)
+// 2. El año actual (debe ser un Number)
+let anioActual = 2024;
 
- let usuario = "Eric";
- document.writeln(`Hola ${usuario}, esto es mucho más fácil de leer así.`);
+// 3. ¿Te gusta programar? (debe ser un Boolean: true o false)
+let leGustaProgramar = true;
+
+// 4. Imprime cada variable en la consola usando console.log()
+// Ejemplo: console.log("Nombre:", miVariable);
+console.log("Nombre del Estudiante:", nombreCompleto);
+console.log("Año en curso:", anioActual);
+console.log("¿Le apasiona el código?:", leGustaProgramar);
