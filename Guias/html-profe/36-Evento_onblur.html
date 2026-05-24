@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento On Blur</title>
+</head>
+<!-- 
+El evento onblur en JavaScript sirve para ejecutar una función cuando un elemento, como un campo de formulario, pierde el foco del usuario. Es útil para validar datos ingresados por el usuario, como verificar un formato de email o contraseña, justo en el momento en que el usuario sale del campo, y para activar otras acciones relacionadas con la pérdida de foco de un elemento. Es decir obliga a realizar la acción sobre el campo, antes de realizar otra acción.
+-->
+<body>
+    <h5>INGRESO DE DATOS</h5>
+    Ingrese su Nombre:
+    <input type="text" id="nombre" onfocus="fun_focus()" onblur="fun_blur()">
+
+    <script>
+        function fun_focus(){
+            document.getElementById('nombre').value = "";
+            document.getElementById('nombre').style.background = '';
+        }
+
+        function fun_blur(){
+            if(document.getElementById('nombre').value ==''){
+                 document.getElementById('nombre').style.background = 'yellow';
+                alert('DEBE INGRESAR DATOS');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

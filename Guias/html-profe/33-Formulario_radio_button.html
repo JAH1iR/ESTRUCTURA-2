@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Radio Buttons - Formulario</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <h4>Seleccione disponibilidad de horario</h4>
+    <form>
+        <input type="radio" id="radio1" name="horario">Mañana<br>
+        <input type="radio" id="radio2" name="horario">Tarde<br>
+        <input type="radio" id="radio3" name="horario">Noche<br>
+        <br><br>
+        <input type="button" value="Confirmar" onclick="seleccion()">
+    </form>
+
+    <script>
+        function seleccion(){
+            if(document.getElementById('radio1').checked){
+                swal('Horario de 8:00 a.m.- 12:00 m.d.');
+            }
+             if(document.getElementById('radio2').checked){
+                swal('Horario de 1:00 p.m.- 6:00 p.m.');
+            }
+             if(document.getElementById('radio3').checked){
+                swal('Horario de 7:00 p.m.- 12:00 p.m.');
+            }
+        }
+
+    </script>
+
+</body>
+</html>

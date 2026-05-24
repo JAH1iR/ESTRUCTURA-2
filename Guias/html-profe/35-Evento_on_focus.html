@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de ON FOCUS - Formulario</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<!--
+El evento onfocus en JavaScript se dispara cuando un elemento HTML, como un campo de entrada (<input>, <select>, <a>), recibe el foco del usuario, es decir, cuando el usuario hace clic en él o lo selecciona con el teclado. Se utiliza para ejecutar funciones o dar retroalimentación visual, como resaltar el campo, mostrar un texto de ayuda o validaciones específicas cuando el usuario comienza a interactuar con el elemento
+-->
+<body>
+    <h4>Ingrese sus Datos</h4>
+    <form>
+        1. Nombre<br>
+        <input type="text" id="nombre" onfocus="vaciar(this.style.background='lightblue')" onblur="vaciar(this.style.background='white')" value="nombre"><br><br>
+        2. Edad<br>
+        <input type="text" id="edad" onfocus="vaciar(this)" value="edad"><br><br>
+        <input type="button" value="ingresar" onclick="verificar()">
+    </form>
+    <script>
+        function vaciar(control){
+            control.value = '';
+        }
+
+        function verificar(){
+            swal('Datos Confirmados')
+        }
+
+    </script> 
+</body>
+</html>

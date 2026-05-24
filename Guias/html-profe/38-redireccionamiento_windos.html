@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - Navegador</title>
+</head>
+<!--
+    La propiedad window.location en JavaScript se refiere a un objeto que contiene información sobre la URL actual de la página web y también permite redirigir al navegador a una nueva dirección. Este objeto tiene varias propiedades como href, que devuelve o establece la URL completa, pathname para la ruta, y hostname para el dominio. Se puede acceder a la información sin el prefijo window. porque el objeto window está en la cima de la jerarquía. 
+
+-->
+<body>
+    Ir a Wikipedia.com 
+    <input type="button" onclick="redireccionar()" value="Ir">
+    <script>
+        function redireccionar(){
+            if( window.confirm('Desea Salir, para ir a wikipedia ?')){
+                window.location = 'https://wikipedia.com';
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
