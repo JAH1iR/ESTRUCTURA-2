@@ -7,10 +7,10 @@ let edadTexto = "18";
 // 1. Igualdad Simple (==) - Compara solo el valor
 let igualdadSimple = (edadUsuario == edadTexto); // Resultado: true
 
-// 2. Identidad Estricta (===) - Compara valor Y tipo de dato (RECOMENDADO)
+// 2. Identidad Estricta (===) - Compara valor Y tipo de dato ideal para validacion de datos en formularios (RECOMENDADO) 
 let identidadEstricta = (edadUsuario === edadTexto); // Resultado: false
 
-// 3. Diferencia Estricta (!==) - ¿Son diferentes en valor o tipo?
+// 3. Diferencia Estricta (!==) - Son diferentes en valor o tipo
 let esDiferente = (edadUsuario !== 20); // Resultado: true
 
 // 4. Operadores de magnitud
@@ -24,7 +24,7 @@ console.log("¿Es mayor a 15?:", esMayor);
 console.log("¿Es menor o igual a 18?:", esMenorIgual);
 
 /**
- * NOTA PROFESIONAL: 
+ * NOTA : 
  * Siempre usa === y !== para evitar errores silenciosos donde 
  * un texto se comporta como un número sin que te des cuenta.
  */

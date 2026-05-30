@@ -1,4 +1,4 @@
-// TEMA 13: PROGRAMACIÓN ORIENTADA A OBJETOS (POO)
+// TEMA 14: PROGRAMACIÓN ORIENTADA A OBJETOS (POO)
 
 /**
  * Basado en la Guía 36 (Validación) y 38 (Redirección).
@@ -30,7 +30,7 @@ class GestorUsuario {
 const usuario1 = new GestorUsuario("Erick", true);
 const usuario2 = new GestorUsuario("", false);
 
-console.log("--- TEMA 13: POO ---");
+console.log("--- TEMA 14: POO ---");
 console.log(usuario1.validarAcceso()); // Resultado: Acceso Permitido
 console.log(usuario2.validarAcceso()); // Resultado: Error de validación
 

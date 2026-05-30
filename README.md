@@ -1,27 +1,29 @@
-# Documentación de Organización y Estructura 2
+# Documentación de Organización - Estructura 2
 
-Este documento detalla la jerarquía y el propósito de cada directorio dentro del proyecto, basado en la arquitectura de desarrollo actual.
+Este documento detalla la jerarquía y el propósito de cada directorio dentro del proyecto de aprendizaje.
 
-## 📁 Clasificación de Directorios
+## 📁 Estructura Principal
 
-### 1. archivos-guias (Carpeta-principal) 
-Carpeta destinada al almacenamiento de recursos académicos y guías de consulta rápida brindados por el profe:
-* **html-profe**: Ejemplos prácticos y documentación sobre la estructura base de documentos HTML.
-* **JS-profe**: Material de referencia sobre sintaxis, lógica en JavaScript.
-* **html-semantico**: Guía sobre el uso de etiquetas de estructura (header, main, footer).
+### 1. **Guias-del-profesor** 
+Recursos académicos y material de referencia:
 
-### 2. Arquitectura CSS (Carpeta-principal)
-Módulos técnicos enfocados en el control visual y la maquetación profesional:
-* **css-box-model**: Pruebas de concepto sobre el modelo de caja (margen, borde, relleno y contenido). Es la base para entender cómo los elementos ocupan espacio en la pantalla.
-* **css-flexbox**: Implementación de layouts flexibles para la distribución de elementos en una sola dimensión (filas o columnas).
-* **css-grid**: Diseño de rejillas bidimensionales para estructuras de página más complejas y robustas.
-* **css-bootstrap**: Integración de componentes preestablecidos y utilidades del framework para agilizar el desarrollo de interfaces responsivas.
+* **1-html-conector-profe**: Ejemplos prácticos de HTML con conexión a JavaScript. Incluye documentación sobre la estructura base de documentos HTML y cómo enlazar scripts externos.
+* **2-JavaScript-profe**: Material de referencia sobre sintaxis, operadores, funciones, arreglos, condicionales, ciclos y conceptos de Programación Orientada a Objetos (POO) en JavaScript hasta el momento.
+* **3-html-semantico**: Guía sobre el uso correcto de etiquetas semánticas (header, main, footer, section, article, etc.) para estructuración accesible y semánticamente correcta.
 
+### 2. **Arquitecturas-css**
+Módulos técnicos enfocados en el control visual, maquetación y diseño responsivo:
 
+* **css-box-model**: Pruebas de concepto sobre el modelo de caja (margen, borde, relleno y contenido). Base fundamental para entender cómo los elementos ocupan espacio en la pantalla.
+* **css-flexbox**: Implementación de layouts flexibles para distribución eficiente de elementos en una dimensión (filas o columnas).
+* **css-grid**: Diseño de rejillas bidimensionales para estructuras de página complejas y alineación precisas.
+* **css-bootstrap**: introducion a la libreria Bootstrap con componentes preestablecidos y utilidades para desarrollo rápido de interfaces responsivas actualmente en inicio...
 
-### 3. curso de JavaScript (Carpeta-principal) 
-* **html**: contiene el index con el link del scrip de donde invocamos nuestro archivos de js.
-* **js**: Espacio dedicado al desarrollo de scripts nativos,
-* **prubas-de-logica**: ejercicios de aplicacion basados en los ejemplos y guias.
+### 3. **Curso-JavaScript**
+Curso estructurado para el aprendizaje progresivo de JavaScript (ejemplos propios):
+
+* **1-Html-conector**: Archivos HTML que actúan como conectores con scripts JavaScript. Contienen el index y elementos de prueba para ejecutar los scripts.
+* **2-Referencias-JavaScript**: Referencia rápida de conceptos clave: variables (var, let), asignación, operadores (aritméticos, comparación, lógicos), arreglos, condicionales, ciclos, funciones y eventos.
+* **3-Pruebas-de-logica**: Ejercicios prácticos de aplicación basados en los conceptos aprendidos en referencias y guías del profesor.
 
 

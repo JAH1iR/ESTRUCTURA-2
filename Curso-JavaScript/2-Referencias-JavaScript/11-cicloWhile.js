@@ -5,7 +5,8 @@ let bateria = 95; // Estado inicial
 console.log("--- TEMA 10: CICLO WHILE ---");
 
 while (bateria < 100) {
-    bateria++; 
+    bateria++; // ++ operador de incremento
+    
     console.log("Cargando... Batería al: " + bateria + "%");
 }
 

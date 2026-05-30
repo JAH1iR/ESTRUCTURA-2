@@ -24,5 +24,5 @@ console.log("Materia en la posición 0:", primeraMateria);
 console.log("Materia modificada en la posición 3:", materias[3]);
 console.log("Cantidad total de materias:", totalMaterias);
 
-// Tip profesional: Aunque el arreglo es 'const', puedes cambiar sus elementos. 
+// Aunque el arreglo es 'const', puedes cambiar sus elementos. 
 // Lo que no puedes es reasignar la variable 'materias' a otro valor totalmente distinto.

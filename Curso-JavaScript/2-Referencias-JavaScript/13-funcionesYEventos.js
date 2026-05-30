@@ -23,7 +23,7 @@ function verificarEstado(nombre, promedio) {
 
 // 3. Simulación de Eventos
 // En el HTML del profe se usa onclick="verificar()". 
-// Aquí simulamos la llamada:
+// Aquí uso la llamada:
 let resultado = verificarEstado("Erick", 3.5);
 console.log(resultado);
 
