@@ -1,29 +1,33 @@
 # Documentación de Organización - Estructura 2
 
-Este documento detalla la jerarquía y el propósito de cada directorio dentro del proyecto de aprendizaje.
+Este documento describe la organización actual del proyecto tras la reorganización general de la carpeta principal.
 
 ## 📁 Estructura Principal
 
-### 1. **Guias-del-profesor** 
-Recursos académicos y material de referencia:
+### 1. **1-Curso-JavaScript**
+Carpeta dedicada al aprendizaje práctico de JavaScript y su conexión con HTML:
 
-* **1-html-conector-profe**: Ejemplos prácticos de HTML con conexión a JavaScript. Incluye documentación sobre la estructura base de documentos HTML y cómo enlazar scripts externos.
-* **2-JavaScript-profe**: Material de referencia sobre sintaxis, operadores, funciones, arreglos, condicionales, ciclos y conceptos de Programación Orientada a Objetos (POO) en JavaScript hasta el momento.
-* **3-html-semantico**: Guía sobre el uso correcto de etiquetas semánticas (header, main, footer, section, article, etc.) para estructuración accesible y semánticamente correcta.
+* **A-Html-conector**: Archivos HTML usados como punto de enlace para ejecutar scripts de JavaScript.
+* **B-Referencias-JavaScript**: Material de referencia con ejercicios y conceptos básicos sobre variables, operadores, arreglos, condicionales, ciclos y funciones.
+* **C-Pruebas-de-logica-propias**: Ejercicios propios para practicar la lógica de programación.
 
-### 2. **Arquitecturas-css**
-Módulos técnicos enfocados en el control visual, maquetación y diseño responsivo:
+### 2. **2-Guias-del-profesor**
+Material de apoyo y recursos proporcionados por el profesor:
 
-* **css-box-model**: Pruebas de concepto sobre el modelo de caja (margen, borde, relleno y contenido). Base fundamental para entender cómo los elementos ocupan espacio en la pantalla.
-* **css-flexbox**: Implementación de layouts flexibles para distribución eficiente de elementos en una dimensión (filas o columnas).
-* **css-grid**: Diseño de rejillas bidimensionales para estructuras de página complejas y alineación precisas.
-* **css-bootstrap**: introducion a la libreria Bootstrap con componentes preestablecidos y utilidades para desarrollo rápido de interfaces responsivas actualmente en inicio...
+* **1-html-semantico**: Guías sobre el uso de etiquetas semánticas en HTML.
+* **2-html-conectores-JavaScript**: Ejemplos de conexión entre HTML y JavaScript.
+* **2-JavaScript-**: Recursos de referencia sobre sintaxis y fundamentos del lenguaje.
+* **4-archivos-JSON**: Archivos de datos en formato JSON para ejercicios y pruebas.
+* **PDFs**: Documentos de apoyo en formato PDF.
 
-### 3. **Curso-JavaScript**
-Curso estructurado para el aprendizaje progresivo de JavaScript (ejemplos propios):
+### 3. **3-Arquitecturas-css**
+Módulos enfocados en diseño visual, maquetación y estilos:
 
-* **1-Html-conector**: Archivos HTML que actúan como conectores con scripts JavaScript. Contienen el index y elementos de prueba para ejecutar los scripts.
-* **2-Referencias-JavaScript**: Referencia rápida de conceptos clave: variables (var, let), asignación, operadores (aritméticos, comparación, lógicos), arreglos, condicionales, ciclos, funciones y eventos.
-* **3-Pruebas-de-logica**: Ejercicios prácticos de aplicación basados en los conceptos aprendidos en referencias y guías del profesor.
+* **css-box-model**: Prácticas sobre el modelo de caja.
+* **css-flexbox**: Ejemplos de diseño con Flexbox.
+* **css-grid**: Ejemplos de maquetación con Grid.
+* **css-boostrap**: Introducción al uso de Bootstrap y sus componentes.
 
+## ✅ Resumen
+La estructura del proyecto se reorganizó para separar mejor los contenidos por temática: JavaScript, guías del profesor y arquitectura CSS.
 

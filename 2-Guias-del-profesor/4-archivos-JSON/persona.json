@@ -1,0 +1,13 @@
+{
+"nombre":"VICENTE FERNANDEZ",
+"edad":25,
+"estudiante": "false",
+"direccion":{
+"calle":"Santiago Barraza, 278-14",
+"ciudad": "La Chorrera, Panamá oeste"
+},
+"telefonos":[
+"507-346-0159",
+"507-253-3201"
+]
+}
