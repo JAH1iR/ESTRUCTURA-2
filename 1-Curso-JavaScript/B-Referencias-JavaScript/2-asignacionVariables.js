@@ -1,4 +1,4 @@
-// TEMA 1: VARIABLES Y TIPOS DE DATOS (STRINGS, NUMBERS, BOOLEANS)
+// TEMA 2: ASIGNACION DE VARIABLES
 
 const universidad = "Tecnológica"; // Tipo: String
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +8,27 @@
 </head>
 <body class="grid-container">
     <header class="header">
-        header
+        <p class="etiqueta">Arquitectura 03</p>
+        <h1>CSS Grid</h1>
+        <p>Una cuadricula de dos dimensiones para organizar filas, columnas y areas.</p>
     </header>
     <nav class="nav">
-        nav
+        <a href="#main">Inicio</a>
+        <a href="#aside">Recursos</a>
     </nav>
-    <main class="main">
-        main
-
+    <main class="main" id="main">
+        <h2>Como funciona este ejemplo</h2>
+        <p>El contenedor usa <code>display: grid</code> y asigna cada elemento a un area con <code>grid-area</code>.</p>
+        <div class="grid-demo"><div>Columna 1</div><div>Columna 2</div><div>Columna 3</div></div>
+        <ul><li><code>grid-template-areas</code> dibuja la estructura con nombres.</li><li>Las filas y columnas controlan el espacio.</li><li>La media query cambia el layout en pantallas pequenas.</li></ul>
     </main>
     <aside class="aside">
-        aside
+        <h2 id="aside">Propiedades clave</h2>
+        <p><code>gap</code>: separacion entre celdas.</p>
+        <p><code>grid-template-columns</code>: ancho de columnas.</p>
+        <p><code>grid-template-areas</code>: mapa del layout.</p>
     </aside>
-    <footer class="footer"> footer 
-        
+    <footer class="footer">Layout responsive con CSS Grid
     </footer>
 
 </body>

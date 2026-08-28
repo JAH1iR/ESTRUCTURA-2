@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,27 @@
     <title>curso de boxmodel</title>
 </head>
 <body> <!--dentro de esta etiqueta va todo nuestra pagina web-->
-    <header>
-        <h1>este es un titulo</h1> 
-    </header>
+    <main class="pagina">
+        <header>
+            <p class="etiqueta">Arquitectura 01</p>
+            <h1>Box Model</h1>
+            <p>Cada elemento HTML se calcula como una caja formada por contenido, padding, borde y margen.</p>
+        </header>
+        <section class="explicacion">
+            <h2>Como se organiza una caja</h2>
+            <div class="diagrama"><div class="margen">margin<div class="borde">border<div class="relleno">padding<div class="contenido">content</div></div></div></div></div>
+            <ul>
+                <li><strong>content:</strong> texto, imagen o contenido del elemento.</li>
+                <li><strong>padding:</strong> espacio interno entre el contenido y el borde.</li>
+                <li><strong>border:</strong> limite visual de la caja.</li>
+                <li><strong>margin:</strong> espacio externo entre cajas.</li>
+            </ul>
+        </section>
+        <section class="explicacion">
+            <h2>La regla box-sizing</h2>
+            <p><code>box-sizing: border-box</code> incluye el padding y el borde dentro del ancho y alto declarados.</p>
+            <div class="tarjetas"><article><h3>content-box</h3><p>El tamano declarado solo mide el contenido.</p></article><article><h3>border-box</h3><p>El tamano declarado incluye contenido, padding y borde.</p></article></div>
+        </section>
+    </main>
 </body>
 </html>

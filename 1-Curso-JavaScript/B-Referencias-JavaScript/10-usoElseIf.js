@@ -1,8 +1,8 @@
-// TEMA 9: USO DEL ELSE IF (MÚLTIPLES OPCIONES)
+// TEMA 10: USO DEL ELSE IF (MULTIPLES OPCIONES)
 
 let puntaje = 85; // Cambia este valor para probar las diferentes opciones
 
-console.log("--- TEMA 9: ELSE IF ---");
+console.log("--- TEMA 10: ELSE IF ---");
 
 if (puntaje >= 90) {
     console.log("Calificación: A (Excelente)");

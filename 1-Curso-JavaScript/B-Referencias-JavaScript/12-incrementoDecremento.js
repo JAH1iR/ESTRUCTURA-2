@@ -1,8 +1,8 @@
-// TEMA 11: INCREMENTO (++) Y DECREMENTO (--)
+// TEMA 12: INCREMENTO (++) Y DECREMENTO (--)
 
 let contador = 0; // Iniciamos contador
 
-console.log("--- TEMA 11: CONTROL DE FLUJO ---");
+console.log("--- TEMA 12: CONTROL DE FLUJO ---");
 
 // Incremento
 contador++; // Suma 1 (ahora es 1)

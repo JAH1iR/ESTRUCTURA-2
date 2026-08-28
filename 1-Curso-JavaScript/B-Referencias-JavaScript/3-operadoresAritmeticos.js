@@ -1,4 +1,4 @@
-// TEMA 2: OPERADORES ARITMÉTICOS
+// TEMA 3: OPERADORES ARITMETICOS
 
 // 1. Datos iniciales
 let precioLibro = 25;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39 - Propiedades de la Pantalla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>39 - Propiedades de la Pantalla (Screen Object)</h1>
+        
+        <div class="ejemplo">
+            <h2>¿Qué es el objeto Screen?</h2>
+            <p>El objeto Screen contiene información sobre la pantalla del usuario: resolución, ancho, altura, colores, etc.</p>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Propiedades principales</h2>
+            <div class="codigo">
+console.log(screen.width);        // Ancho en píxeles
+console.log(screen.height);       // Altura en píxeles
+console.log(screen.colorDepth);   // Profundidad de color
+console.log(screen.pixelDepth);   // Profundidad de píxeles
+console.log(screen.availWidth);   // Ancho disponible (sin barra)
+console.log(screen.availHeight);  // Altura disponible (sin barra)
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Información de la pantalla</h2>
+            <button onclick="info()">Obtener Información</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Detectar si es pantalla pequeña</h2>
+            <button onclick="detectarTipo()">Detectar Tipo de Dispositivo</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Orientación de la pantalla</h2>
+            <button onclick="orientacion()">Verificar Orientación</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/39-propiedad_pantalla.js"></script>
+</body>
+</html>

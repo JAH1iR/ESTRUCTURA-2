@@ -1,4 +1,4 @@
-// TEMA 4: ARREGLOS INDEXADOS (LISTAS SIMPLES)
+// TEMA 5: ARREGLOS INDEXADOS (LISTAS SIMPLES)
 
 /**
  * REGLA DE ORO: 
@@ -18,7 +18,7 @@ materias[3] = "Redes";
 // 4. Propiedad .length (Saber cuántos elementos hay)
 let totalMaterias = materias.length;
 
-console.log("--- RESULTADOS TEMA 4 ---");
+console.log("--- RESULTADOS TEMA 5 ---");
 console.log("Lista completa:", materias);
 console.log("Materia en la posición 0:", primeraMateria);
 console.log("Materia modificada en la posición 3:", materias[3]);

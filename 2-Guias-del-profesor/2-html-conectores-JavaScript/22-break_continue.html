@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 - Break y Continue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .diferencia {
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        button, input {
+            padding: 8px 12px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>22 - Break y Continue</h1>
+        
+        <div class="diferencia">
+            <strong>Break:</strong> Sale completamente del ciclo<br>
+            <strong>Continue:</strong> Salta a la siguiente iteración
+        </div>
+
+        <div class="ejemplo">
+            <h2>¿Qué es Break?</h2>
+            <p>Break detiene el ciclo completamente.</p>
+            <div class="codigo">
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) break;  // Sale del ciclo cuando i es 5
+    console.log(i);
+}
+// Salida: 1 2 3 4
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Break - Encontrar número</h2>
+            <p>Buscar número 7 en un arreglo y detener cuando lo encuentre</p>
+            <div class="codigo">
+let numeros = [2, 4, 6, 7, 8, 9];
+for (let i = 0; i < numeros.length; i++) {
+    console.log("Revisando: " + numeros[i]);
+    if (numeros[i] === 7) {
+        console.log("¡Encontrado!");
+        break;
+    }
+}
+            </div>
+            <button onclick="ejemploBreak()">Ver Break</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Break en Switch</h2>
+            <p>Break también se usa en Switch (ya lo viste) para evitar que siga ejecutando otros cases</p>
+            <div class="codigo">
+switch (opcion) {
+    case 1:
+        console.log("Opción 1");
+        break;  // Sin break, seguiría a case 2
+    case 2:
+        console.log("Opción 2");
+        break;
+}
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>¿Qué es Continue?</h2>
+            <p>Continue salta a la siguiente iteración del ciclo.</p>
+            <div class="codigo">
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) continue;  // Salta la iteración cuando i es 5
+    console.log(i);
+}
+// Salida: 1 2 3 4 6 7 8 9 10 (falta el 5)
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Continue - Omitir pares</h2>
+            <p>Imprimir solo números impares saltando los pares</p>
+            <div class="codigo">
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) continue;  // Si es par, salta
+    console.log(i);  // Solo impares
+}
+// Salida: 1 3 5 7 9
+            </div>
+            <button onclick="ejemploContinue()">Ver Continue</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 4: Continue - Saltar emails inválidos</h2>
+            <p>Procesar solo emails que contengan "@"</p>
+            <div class="codigo">
+let emails = ["juan@mail.com", "invalido", "ana@gmail.com", "nomail"];
+
+for (let i = 0; i < emails.length; i++) {
+    if (!emails[i].includes("@")) continue;
+    console.log("Procesando: " + emails[i]);
+}
+            </div>
+            <button onclick="ejemploEmails()">Ver Ejemplo</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 5: Break - Contraseña correcta</h2>
+            <p>Permitir 3 intentos de contraseña</p>
+            <div class="codigo">
+let intentos = 0;
+let contraseña = "1234";
+let maxIntentos = 3;
+
+for (let i = 1; i <= 5; i++) {
+    let ingresada = prompt("Contraseña:");
+    if (ingresada === contraseña) {
+        console.log("✓ Acceso permitido");
+        break;  // Sale del ciclo
+    } else if (i === maxIntentos) {
+        console.log("✗ Demasiados intentos");
+        break;
+    }
+}
+            </div>
+            <button onclick="ejemploContraseña()">Ver Simulación</button>
+            <div id="resultado4" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Comparación: Break vs Continue</h2>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="background-color: #0066cc; color: white;">
+                    <td style="border: 1px solid #ddd; padding: 10px;"><strong>Break</strong></td>
+                    <td style="border: 1px solid #ddd; padding: 10px;"><strong>Continue</strong></td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 10px;">Sale completamente del ciclo</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">Salta a la siguiente iteración</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 10px;">El ciclo termina</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">El ciclo continúa</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 10px;">for (i=1; i<=10; i++) if (i===5) break; → 1 2 3 4</td>
+                    <td style="border: 1px solid #ddd; padding: 10px;">for (i=1; i<=10; i++) if (i===5) continue; → 1 2 3 4 6 7 8 9 10</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/22-break_continue.js"></script>
+</body>
+</html>

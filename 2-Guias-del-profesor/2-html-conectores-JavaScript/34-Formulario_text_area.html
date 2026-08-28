@@ -14,20 +14,7 @@
         <p> <textarea id="comentarios" rows="25" cols="70"></textarea></p>
         <input type="button" value="Enviar" onclick="comentar()">
     </form>
-    <script>
-        let area = document.getElementById('comentarios');
-        area.style.resize = "none";
-
-        function comentar() {
-            if(document.getElementById('comentarios').value.length >100){
-                swal('el comentario es muy largos.')
-            }else{
-                swal('muchas gracias!!')
-            }
-            
-        }
-
-    </script>
+    <script src="../2-JavaScript-/34-Formulario_text_area.js"></script>
 
 </body>
 </html>

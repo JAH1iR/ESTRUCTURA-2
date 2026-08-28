@@ -16,22 +16,7 @@
         <br><br>
         <input type="button" value="confirmar" onclick="verificar()">
     </form>
-    <script>
-        let control = 0;
-        let contrasena = 'acceso2026';
-        function verificar(){
-            let varclave = document.getElementById('clave').value;
-            if(varclave !=contrasena || varclave == ""){
-                alert('ERROR, clave incorrecta o Vacia, intente nuevamente');
-                control++
-                if(control >= 3){
-                    alert('INTENTOS AGOTADOS, Acceso BLOQUEADO - Contactar a Soporte Técnico');
-                }
-            }else{
-                window.open("http://www.google.com");
-            }
-        }
-    </script>
+    <script src="../2-JavaScript-/29-Formulario_texto.js"></script>
 
 </body>
 </html>

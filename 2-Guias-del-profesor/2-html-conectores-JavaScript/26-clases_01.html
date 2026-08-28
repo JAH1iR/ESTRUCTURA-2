@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26 - Clases en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>26 - Clases en JavaScript</h1>
+        
+        <div class="ejemplo">
+            <h2>¿Qué es una Clase?</h2>
+            <p>Una clase es como un PLANO o MOLDE para crear objetos. Define propiedades y métodos que tendrán todos los objetos creados desde esa clase.</p>
+            <div class="codigo">
+class NombreClase {
+    constructor(parametros) {
+        this.propiedad = parametro;
+    }
+    
+    metodo() {
+        // código del método
+    }
+}
+
+let objeto = new NombreClase(argumentos);
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Partes de una Clase</h2>
+            <ul>
+                <li><strong>Constructor:</strong> Se ejecuta cuando creas un objeto (new). Inicializa las propiedades.</li>
+                <li><strong>Propiedades:</strong> Variables del objeto (nombre, edad, precio)</li>
+                <li><strong>Métodos:</strong> Funciones del objeto (hablar, mover, calcular)</li>
+            </ul>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Clase Persona</h2>
+            <div class="codigo">
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+    
+    presentarse() {
+        console.log("Hola, me llamo " + this.nombre);
+    }
+}
+
+let persona1 = new Persona("Juan", 30);
+let persona2 = new Persona("María", 25);
+
+persona1.presentarse();  // Hola, me llamo Juan
+persona2.presentarse();  // Hola, me llamo María
+            </div>
+            <button onclick="ejemplo1()">Ver Ejemplo 1</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Clase Auto</h2>
+            <div class="codigo">
+class Auto {
+    constructor(marca, modelo, velocidad = 0) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidad = velocidad;
+    }
+    
+    acelerar() {
+        this.velocidad += 10;
+    }
+    
+    frenar() {
+        this.velocidad -= 10;
+    }
+    
+    mostrarInfo() {
+        console.log(this.marca + " " + this.modelo + " - Velocidad: " + this.velocidad);
+    }
+}
+
+let miAuto = new Auto("Toyota", "Corolla");
+miAuto.acelerar();
+miAuto.mostrarInfo();
+            </div>
+            <button onclick="ejemplo2()">Ver Ejemplo 2</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Clase CuentaBancaria</h2>
+            <div class="codigo">
+class CuentaBancaria {
+    constructor(titular, saldoInicial = 0) {
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+    
+    depositar(cantidad) {
+        this.saldo += cantidad;
+        return "Deposito realizado. Nuevo saldo: $" + this.saldo;
+    }
+    
+    retirar(cantidad) {
+        if (cantidad <= this.saldo) {
+            this.saldo -= cantidad;
+            return "Retiro realizado. Nuevo saldo: $" + this.saldo;
+        }
+        return "Saldo insuficiente";
+    }
+}
+
+let cuenta = new CuentaBancaria("Pedro", 1000);
+            </div>
+            <button onclick="ejemplo3()">Ver Ejemplo 3</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 4: Clase Estudiante</h2>
+            <div class="codigo">
+class Estudiante {
+    constructor(nombre, carrera, semestre) {
+        this.nombre = nombre;
+        this.carrera = carrera;
+        this.semestre = semestre;
+        this.calificaciones = [];
+    }
+    
+    agregarCalificacion(calificacion) {
+        this.calificaciones.push(calificacion);
+    }
+    
+    calcularPromedio() {
+        let suma = this.calificaciones.reduce((a, b) => a + b, 0);
+        return suma / this.calificaciones.length;
+    }
+}
+            </div>
+            <button onclick="ejemplo4()">Ver Ejemplo 4</button>
+            <div id="resultado4" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Clase vs Objeto Literal</h2>
+            <p><strong>Objeto Literal:</strong> Un objeto único</p>
+            <div class="codigo">
+let persona = {
+    nombre: "Juan",
+    edad: 30
+};
+            </div>
+            <p><strong>Clase:</strong> Un molde para crear múltiples objetos similares</p>
+            <div class="codigo">
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+
+let persona1 = new Persona("Juan", 30);
+let persona2 = new Persona("María", 25);
+let persona3 = new Persona("Carlos", 35);
+            </div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/26-clases_01.js"></script>
+</body>
+</html>

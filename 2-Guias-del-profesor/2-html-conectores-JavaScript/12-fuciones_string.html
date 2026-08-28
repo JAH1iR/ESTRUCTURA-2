@@ -6,58 +6,7 @@
     <title>Funciones String</title>
 </head>
 <body>
-    <script>
-        let palabras = 'Buenas Noches';
-        document.write('La palabra es: ', palabras);
-        document.writeln('<br>');
-        // ver tamaño de un texto o palabra
-        document.writeln('Cantidad de letras: ', palabras.length);
-        document.writeln('<br>');
-        // ver caracteres especifico en un texto o palabra
-        document.write('Ver letras: ', palabras.slice(0,7));
-        document.writeln('<br>');
-        
-        document.write('Ver letras: ', palabras.substring(0,3));
-        document.writeln('<br>');
-
-        // cambiar los valores en un texto
-        let saludo = 'Hola a todos';
-        saludo = saludo.replace('Hola', 'Adios');
-        document.writeln(saludo);
-        document.writeln('<br>');
-
-        // poner en mayuscula una palabra
-        document.writeln('coloca en mayúsculas: ', palabras.toUpperCase());
-        document.writeln('<br>');
-
-        // poner en minuscula una palabra
-        document.writeln('coloca en minúsculas: ', palabras.toLowerCase());
-        document.writeln('<br>')
-
-        // unir o concatenar texto
-        let palabra2 = 'Curso de ';
-        let palabra3 = 'JavaScript'
-        document.writeln('Unir palabras: ', palabra2.concat(palabra3));
-        document.writeln('<br>');
-
-        // acortar espacio entre texto del lado izquierdo
-        let palabra4 = '     Como fue tu semana?       ';
-        document.writeln(palabra4);
-        document.writeln('<br>');
-        document.writeln(palabra4.trimStart());
-        document.writeln('<br>');
-        // acorta espacio entre texto del lado derecho
-        document.writeln(palabra4.trimEnd());
-        document.writeln('<br>');
-        
-        // acorta espacio entre texto del lado izquierdo y derecho
-        document.writeln(palabra4.trim());
-        document.writeln('<br>');
-
-        // cortar cantidad de caracter
-        document.writeln(palabra3.split('Script'));
-
-    </script>
+    <script src="../2-JavaScript-/12-fuciones_string.js"></script>
 
 </body>
 </html>

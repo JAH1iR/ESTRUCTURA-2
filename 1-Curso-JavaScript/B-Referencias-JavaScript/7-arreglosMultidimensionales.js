@@ -1,4 +1,4 @@
-// TEMA 6: ARREGLOS MULTIDIMENSIONALES (ARREGLOS DENTRO DE ARREGLOS)
+// TEMA 7: ARREGLOS MULTIDIMENSIONALES (ARREGLOS DENTRO DE ARREGLOS)
 
 const horario = [
     ["Lunes", "Programación"], // Índice 0
@@ -6,7 +6,7 @@ const horario = [
     ["Miércoles", "Física"]     // Índice 2
 ];
 
-console.log("--- TEMA 6: MULTIDIMENSIONALES ---");
+console.log("--- TEMA 7: MULTIDIMENSIONALES ---");
 
 // Acceder a "Martes" (Fila 1, Columna 0)
 console.log("Día:", horario[1][0]);

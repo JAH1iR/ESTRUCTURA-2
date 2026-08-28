@@ -1,0 +1,15 @@
+let nombre, edad, direccion, telefono, correo;
+        nombre = prompt('Ingrese su nombre: ');
+        edad = prompt('Ingrese su edad: ');
+        direccion = prompt('Ingrese su dirección: ');
+        telefono = prompt('Ingrese su teléfono: ');
+        correo = prompt('Ingrese su correo electrónico: ');
+        document.writeln('Nombre: ' + nombre);
+        document.writeln('<br>');
+        document.writeln('Edad :' + edad);
+        document.writeln('<br>');
+        document.writeln('Dirección: ' + direccion);
+        document.writeln('<br>');
+        document.writeln('Teléfono :' + telefono);
+        document.writeln('<br>');
+        document.writeln('Correo Electrónico :' + correo);

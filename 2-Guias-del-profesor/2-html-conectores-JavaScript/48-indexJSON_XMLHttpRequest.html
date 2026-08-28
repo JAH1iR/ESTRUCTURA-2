@@ -5,45 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uso de XMLHttpRequest JASON - JavaScript</title>
 </head>
-<!--
-Ejemplo Basico para ver datos de json en javascript
-<script>
-let mipersona = {
-"nombre":"Pedro Pablo Sánchez",
-"edad":25,
-"estudiante": "false",
-"dirección":{
-"calle":"Santiago Barraza, 278-14",
-"ciudad": "La Chorrera, Panamá oeste"
-},
-"telefonos":[
-"507-346-0159",
-"507-253-3201"
-]
-};
-let elementotexto = document.getElementById('nombre');
-elementotexto.textContent = mipersona.nombre;
-</script>
--->
 <body>
 <div id="nombre"></div>
-<script>
-let datosjson;
-// el objeto XMLHttpRequest sirve para solicitar a un objeto jason que no de su
-información
-let xhr = new XMLHttpRequest();
-xhr.open('GET','persona.json',true);
-xhr.responseType = 'json';
-xhr.onload = function(){
-if(xhr.status === 200){
-datosjson = xhr.response;
-let elementotexto = document.getElementById("nombre");
-elementotexto.textContent = datosjson.nombre;
-}else{
-// manejar el error
-}
-}
-xhr.send();
-</script>
+<script src="../2-JavaScript-/48-indexJSON_XMLHttpRequest.js"></script>
 </body>
 </html

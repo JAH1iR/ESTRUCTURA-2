@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>52 - Evento en DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+        #caja {
+            width: 100%;
+            height: 100px;
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>52 - Manejo de Eventos en el DOM</h1>
+        
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Agregar elemento al DOM</h2>
+            <button onclick="agregarElemento()">Agregar Elemento</button>
+            <div id="contenedor1" class="resultado"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Cambiar contenido con innerHTML</h2>
+            <div id="caja">Haz click aquí</div>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Modificar atributos</h2>
+            <button onclick="cambiarAtributos()">Cambiar Atributos</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 4: Crear y remover elementos</h2>
+            <button onclick="crearLista()">Crear Lista</button>
+            <button onclick="limpiarLista()">Limpiar</button>
+            <div id="lista"></div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/52-evento_DOM.js"></script>
+</body>
+</html>

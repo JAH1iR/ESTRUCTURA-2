@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 - Conteo de Caracteres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            min-height: 100px;
+            font-family: Arial;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>40 - Conteo de Caracteres</h1>
+        
+        <div class="ejemplo">
+            <h2>Contador de caracteres en tiempo real</h2>
+            <textarea id="texto" placeholder="Escribe algo aquí..." oninput="contar()"></textarea>
+            <div id="resultado" class="resultado">
+                <strong>Caracteres:</strong> 0 | <strong>Palabras:</strong> 0 | <strong>Líneas:</strong> 0
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Limitador de caracteres (máximo 100)</h2>
+            <textarea id="texto2" placeholder="Máximo 100 caracteres" oninput="limitarCaracteres(100)"></textarea>
+            <div id="resultado2" class="resultado">
+                <strong>Caracteres:</strong> 0 / 100
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Validador de contraseña</h2>
+            <input type="password" id="contraseña" placeholder="Mínimo 8 caracteres" oninput="validarContraseña()">
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/40-conteo_caracter.js"></script>
+</body>
+</html>

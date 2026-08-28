@@ -1,4 +1,4 @@
-// TEMA 12: FUNCIONES Y EVENTOS (Basado en guía 35 del Profe)
+// TEMA 13: FUNCIONES Y EVENTOS (Basado en guía 35 del Profe)
 
 /**
  * ANALOGÍA: La Función es como una "Receta". 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63 - Fetch POST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+            white-space: pre-wrap;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>63 - Fetch API - Método POST</h1>
+        
+        <div class="ejemplo">
+            <h2>¿Qué es POST?</h2>
+            <p>POST es un método HTTP para enviar datos al servidor.</p>
+            <div class="codigo">
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datos)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Crear usuario (POST)</h2>
+            <label>Nombre:</label><br>
+            <input type="text" id="nombre" placeholder="Juan"><br>
+            <label>Email:</label><br>
+            <input type="email" id="email" placeholder="juan@example.com"><br>
+            <button onclick="ejemplo1()">Enviar (POST)</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: POST con datos predefinidos</h2>
+            <button onclick="ejemplo2()">Enviar Comentario</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Diferencias principales: GET vs POST</h2>
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="background: #f0f0f0;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">GET</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">POST</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Obtener datos</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Enviar datos</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Visible en URL</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">En el body (oculto)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Menos seguro</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Más seguro</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Sin body</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Con body</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Métodos HTTP principales</h2>
+            <ul>
+                <li><strong>GET:</strong> Obtener datos (no modifica servidor)</li>
+                <li><strong>POST:</strong> Crear nuevo recurso</li>
+                <li><strong>PUT:</strong> Actualizar recurso completo</li>
+                <li><strong>PATCH:</strong> Actualizar parte de un recurso</li>
+                <li><strong>DELETE:</strong> Eliminar recurso</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/63-index_post.js"></script>
+</body>
+</html>

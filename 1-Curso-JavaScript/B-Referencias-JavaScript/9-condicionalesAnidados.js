@@ -1,9 +1,9 @@
-// TEMA 8: CONDICIONALES ANIDADOS (FILTROS POR CAPAS)
+// TEMA 9: CONDICIONALES ANIDADOS (FILTROS POR CAPAS)
 
 let esEstudiante = true;
 let tieneCarnet = false;
 
-console.log("--- TEMA 8: CONDICIONALES ANIDADOS ---");
+console.log("--- TEMA 9: CONDICIONALES ANIDADOS ---");
 
 if (esEstudiante) {
     console.log("Acceso al campus: Permitido.");

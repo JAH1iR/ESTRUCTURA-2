@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,25 @@
     <title>curso de flexbox</title>
 </head>
 <body>
-    <header>
-        <div class="header container">
+    <main class="pagina">
+        <header class="cabecera">
             <div>
-                <h1>Mi primera pagina</h1>
+                <p class="etiqueta">Arquitectura 02</p>
+                <h1>Flexbox</h1>
+                <p>Organiza elementos en una dimension: fila o columna.</p>
             </div>
-        </div>
-    </header>
+            <nav class="menu"><a href="#concepto">Concepto</a><a href="#propiedades">Propiedades</a></nav>
+        </header>
+        <section id="concepto" class="bloque">
+            <h2>Una dimension a la vez</h2>
+            <p>Flexbox organiza elementos en un eje principal con <code>flex-direction: row</code> o <code>column</code>.</p>
+            <div class="ejemplo-flex"><div>Elemento 1</div><div>Elemento 2</div><div>Elemento 3</div></div>
+        </section>
+        <section id="propiedades" class="bloque">
+            <h2>Como leer este layout</h2>
+            <dl><dt><code>display: flex</code></dt><dd>Activa el contexto flexible.</dd><dt><code>justify-content</code></dt><dd>Distribuye sobre el eje principal.</dd><dt><code>align-items</code></dt><dd>Alinea sobre el eje cruzado.</dd><dt><code>gap</code></dt><dd>Separa elementos de forma uniforme.</dd><dt><code>flex-wrap: wrap</code></dt><dd>Permite saltar a otra linea.</dd></dl>
+        </section>
+        <section class="bloque"><h2>Tarjetas adaptables</h2><div class="tarjetas"><article>Contenido principal</article><article>Contenido secundario</article><article>Acciones</article></div></section>
+    </main>
 </body>
 </html>

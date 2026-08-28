@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44 - Objetos y Prototipos Avanzado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>44 - Objetos y Prototipos Avanzado</h1>
+        
+        <div class="ejemplo">
+            <h2>Métodos útiles con objetos</h2>
+            <ul>
+                <li><strong>Object.keys():</strong> Obtiene las claves de un objeto</li>
+                <li><strong>Object.values():</strong> Obtiene los valores de un objeto</li>
+                <li><strong>Object.entries():</strong> Obtiene pares clave-valor</li>
+                <li><strong>Object.assign():</strong> Copia propiedades de un objeto a otro</li>
+                <li><strong>Object.create():</strong> Crea un objeto con prototipo específico</li>
+            </ul>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Object.keys(), values(), entries()</h2>
+            <div class="codigo">
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid"
+};
+
+console.log(Object.keys(persona));      // ["nombre", "edad", "ciudad"]
+console.log(Object.values(persona));    // ["Juan", 30, "Madrid"]
+console.log(Object.entries(persona));   // [["nombre","Juan"], ["edad",30], ...]
+            </div>
+            <button onclick="ejemplo1()">Ver Ejemplo</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Object.assign() - Copiar y fusionar</h2>
+            <div class="codigo">
+let obj1 = { a: 1, b: 2 };
+let obj2 = { c: 3, d: 4 };
+
+let fusion = Object.assign({}, obj1, obj2);
+console.log(fusion);  // { a: 1, b: 2, c: 3, d: 4 }
+            </div>
+            <button onclick="ejemplo2()">Ver Ejemplo</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: hasOwnProperty() - Verificar propiedad</h2>
+            <div class="codigo">
+let auto = {
+    marca: "Toyota",
+    modelo: "Corolla"
+};
+
+console.log(auto.hasOwnProperty("marca"));    // true
+console.log(auto.hasOwnProperty("precio"));   // false
+            </div>
+            <button onclick="ejemplo3()">Ver Ejemplo</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 4: Extender prototipo de Array</h2>
+            <div class="codigo">
+// Agregar método personalizado a Array
+Array.prototype.suma = function() {
+    return this.reduce((a, b) => a + b, 0);
+};
+
+let numeros = [1, 2, 3, 4, 5];
+console.log(numeros.suma());  // 15
+            </div>
+            <button onclick="ejemplo4()">Ver Ejemplo</button>
+            <div id="resultado4" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 5: instanceof - Verificar tipo</h2>
+            <button onclick="ejemplo5()">Ver Ejemplo</button>
+            <div id="resultado5" class="resultado" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/44-objetos_prototipos.js"></script>
+</body>
+</html>

@@ -13,21 +13,7 @@ El evento onblur en JavaScript sirve para ejecutar una función cuando un elemen
     Ingrese su Nombre:
     <input type="text" id="nombre" onfocus="fun_focus()" onblur="fun_blur()">
 
-    <script>
-        function fun_focus(){
-            document.getElementById('nombre').value = "";
-            document.getElementById('nombre').style.background = '';
-        }
-
-        function fun_blur(){
-            if(document.getElementById('nombre').value ==''){
-                 document.getElementById('nombre').style.background = 'yellow';
-                alert('DEBE INGRESAR DATOS');
-            }
-
-        }
-
-    </script>
+    <script src="../2-JavaScript-/36-Evento_onblur.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 - Async/Await</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>60 - Async/Await (Forma moderna)</h1>
+        
+        <div class="ejemplo">
+            <h2>¿Qué es Async/Await?</h2>
+            <p>Async/Await hace que el código asincrónico se lea como si fuera sincrónico. Es la forma más moderna de manejar promesas.</p>
+            <div class="codigo">
+// Sintaxis:
+async function miFunc() {
+    try {
+        const resultado = await unaPromesa();
+        console.log(resultado);
+    } catch (error) {
+        console.error(error);
+    }
+}
+            </div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ventajas de Async/Await</h2>
+            <ul>
+                <li>✓ Código más legible y limpio</li>
+                <li>✓ Se parece a código sincrónico</li>
+                <li>✓ Manejo de errores con try/catch</li>
+            </ul>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Async/Await simple</h2>
+            <button onclick="ejemplo1()">Ver Ejemplo</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Obtener datos de API con Async/Await</h2>
+            <button onclick="ejemplo2()">Obtener Usuario</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Manejar errores con try/catch</h2>
+            <button onclick="ejemplo3()">Probar Error</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Comparación: .then() vs Async/Await</h2>
+            <div class="codigo">
+// Con .then()
+fetch(url)
+    .then(r => r.json())
+    .then(data => console.log(data))
+    .catch(e => console.error(e));
+
+// Con Async/Await (más limpio)
+async function obtener() {
+    try {
+        const r = await fetch(url);
+        const data = await r.json();
+        console.log(data);
+    } catch (e) {
+        console.error(e);
+    }
+}
+            </div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/60-asincrono_async_await.js"></script>
+</body>
+</html>

@@ -1,16 +1,39 @@
-*{ /*selector universal que aplica a todos los elementos del documento*/
-    margin: 0;/*elimina el margen predeterminado de todos los elementos*/
-    padding: 0;/*elimina el relleno predeterminado de todos los elementos*/
-    box-sizing: border-box; /*establece el modelo de caja para todos los elementos*/
+/* Aplicamos el mismo punto de partida a todos los elementos. */
+* {
+    margin: 0; /* Quitamos el margen que el navegador agrega por defecto. */
+    padding: 0; /* Quitamos el espacio interno que el navegador agrega por defecto. */
+    box-sizing: border-box; /* El ancho incluye el contenido, el padding y el borde. */
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #d1cbcb;
-    font-size: 1.2em;/*establece el tamaño de fuente para el cuerpo del documento*/
+    font-size: 1.2em; /* Define el tamano general del texto. */
     min-height: 100vh;
-    padding: 20px;
-    }
-header{
+    padding: 20px; /* Separa el contenido de los bordes de la ventana. */
+}
+
+/* Limita el ancho para que las lineas sean faciles de leer. */
+.pagina {
+    max-width: 900px;
+    margin: 0 auto; /* Centra la pagina horizontalmente. */
+}
+
+header {
     background-color: #3228b7;
-    padding: 20px 0;
+    color: white;
+    padding: 28px; /* Espacio entre el texto y el borde del header. */
+}
+.etiqueta { margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: .75em; }
+.explicacion { background: white; margin-top: 20px; padding: 24px; border: 1px solid #bbb; }
+.diagrama { background: #f1c40f; padding: 24px; text-align: center; }
+.borde { background: #e67e22; border: 6px solid #c0392b; padding: 20px; }
+.relleno { background: #2ecc71; padding: 20px; }
+.contenido { background: white; padding: 18px; }
+.tarjetas { display: flex; gap: 16px; }
+.tarjetas article { flex: 1; padding: 16px; border: 2px solid #3228b7; }
+
+/* En pantallas pequenas, las tarjetas se colocan una debajo de otra. */
+@media (max-width: 600px) {
+    .tarjetas { flex-direction: column; }
 }

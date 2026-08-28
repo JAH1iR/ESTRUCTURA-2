@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 - Introducción a POO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .ejemplo {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .codigo {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .resultado {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: #2e7d32;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>25 - Introducción a Programación Orientada a Objetos (POO)</h1>
+        
+        <div class="ejemplo">
+            <h2>¿Qué es POO?</h2>
+            <p>La Programación Orientada a Objetos es un paradigma de programación que organiza el código usando OBJETOS con propiedades y métodos.</p>
+            <p><strong>Conceptos clave:</strong></p>
+            <ul>
+                <li><strong>Objeto:</strong> Una entidad que tiene propiedades (datos) y métodos (acciones)</li>
+                <li><strong>Propiedades:</strong> Características del objeto (nombre, edad, color)</li>
+                <li><strong>Métodos:</strong> Acciones que puede hacer el objeto (hablar, mover, saltar)</li>
+            </ul>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 1: Objeto simple (Persona)</h2>
+            <div class="codigo">
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid",
+    
+    presentarse: function() {
+        console.log("Me llamo " + this.nombre + " y tengo " + this.edad + " años");
+    }
+};
+
+persona.presentarse();
+            </div>
+            <button onclick="ejemplo1()">Ver Ejemplo 1</button>
+            <div id="resultado1" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 2: Objeto Auto</h2>
+            <div class="codigo">
+let auto = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    velocidad: 0,
+    
+    acelerar: function() {
+        this.velocidad += 10;
+    },
+    
+    frenar: function() {
+        this.velocidad -= 10;
+    },
+    
+    mostrarVelocidad: function() {
+        console.log("Velocidad: " + this.velocidad + " km/h");
+    }
+};
+
+auto.acelerar();
+auto.mostrarVelocidad();  // 10 km/h
+auto.acelerar();
+auto.mostrarVelocidad();  // 20 km/h
+            </div>
+            <button onclick="ejemplo2()">Ver Ejemplo 2</button>
+            <div id="resultado2" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 3: Objeto Banco (Cuenta)</h2>
+            <div class="codigo">
+let cuenta = {
+    titular: "Pedro",
+    saldo: 1000,
+    
+    depositar: function(cantidad) {
+        this.saldo += cantidad;
+        console.log("Deposito de " + cantidad + ". Nuevo saldo: " + this.saldo);
+    },
+    
+    retirar: function(cantidad) {
+        if (cantidad <= this.saldo) {
+            this.saldo -= cantidad;
+            console.log("Retiro de " + cantidad + ". Nuevo saldo: " + this.saldo);
+        } else {
+            console.log("Saldo insuficiente");
+        }
+    },
+    
+    mostrarSaldo: function() {
+        console.log("Saldo de " + this.titular + ": $" + this.saldo);
+    }
+};
+            </div>
+            <button onclick="ejemplo3()">Ver Ejemplo 3</button>
+            <div id="resultado3" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ejemplo 4: Objeto Libro</h2>
+            <div class="codigo">
+let libro = {
+    titulo: "JavaScript Avanzado",
+    autor: "Kyle Simpson",
+    año: 2014,
+    páginas: 512,
+    
+    información: function() {
+        console.log(this.titulo + " por " + this.autor + " (" + this.año + ")");
+    },
+    
+    resumen: function() {
+        console.log(this.titulo + " tiene " + this.páginas + " páginas");
+    }
+};
+            </div>
+            <button onclick="ejemplo4()">Ver Ejemplo 4</button>
+            <div id="resultado4" class="resultado" style="display:none;"></div>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Ventajas de los Objetos</h2>
+            <ul>
+                <li><strong>Organización:</strong> Agrupa datos relacionados</li>
+                <li><strong>Reutilización:</strong> Un objeto se puede usar múltiples veces</li>
+                <li><strong>Mantenibilidad:</strong> Fácil de actualizar todas las propiedades</li>
+                <li><strong>Realismo:</strong> Refleja objetos del mundo real</li>
+            </ul>
+        </div>
+
+        <div class="ejemplo">
+            <h2>Accediendo a propiedades y métodos</h2>
+            <div class="codigo">
+let persona = {
+    nombre: "María",
+    edad: 25,
+    
+    saludar: function() {
+        console.log("Hola");
+    }
+};
+
+// Accediendo a propiedades
+console.log(persona.nombre);  // María
+console.log(persona.edad);    // 25
+
+// Accediendo a métodos (con paréntesis)
+persona.saludar();  // Hola
+
+// Modificando propiedades
+persona.edad = 26;
+            </div>
+        </div>
+    </div>
+
+    <script src="../2-JavaScript-/25-poo_01.js"></script>
+</body>
+</html>
