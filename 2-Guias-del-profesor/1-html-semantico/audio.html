@@ -10,12 +10,12 @@
         AUDIO: inserta sonido.
         - src: ruta del archivo.
         - controls: muestra controles de reproducción.
-        - autoplay: reproduce automáticamente (recomendado con muted).
+        - autoplay: reproduce automáticamente; debe usarse con cuidado para no interrumpir al usuario.
         - muted: silenciado.
         - loop: repite en ciclo.
     -->
     <h1>Reproductor de audio</h1>
-    <audio src="audio/musica-fondo.mp3" controls autoplay muted loop>
+    <audio src="audio/musica-fondo.mp3" controls loop>
         Tu navegador no soporta audio HTML5.
     </audio>
 </body>

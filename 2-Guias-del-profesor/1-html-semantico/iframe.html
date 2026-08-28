@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe - contenido embebido</title>
+    <style>
+        iframe { max-width: 100%; border: 0; }
+    </style>
 </head>
 <body>
     <!--
@@ -11,10 +14,10 @@
         Atributos comunes: src, width, height, title (accesibilidad).
     -->
     <h1>Ejemplo de iframe (YouTube)</h1>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-            title="Video de ejemplo" frameborder="0" allowfullscreen>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Video de ejemplo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
     <br>
-    <iframe src="https://www.wikipedia.org" width="800" height="400" title="Wikipedia"></iframe>
+    <iframe src="https://www.wikipedia.org" width="800" height="400" title="Wikipedia" loading="lazy"></iframe>
 </body>
 </html>

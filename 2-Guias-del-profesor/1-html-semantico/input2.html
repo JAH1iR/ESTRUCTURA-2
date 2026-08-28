@@ -10,17 +10,18 @@
         INPUTS PARA FECHAS Y HORAS:
         - date: selector de fecha.
         - time: selector de hora.
-        - datetime-local: fecha y hora (no funciona en Firefox).
+        - datetime-local: fecha y hora local; la interfaz puede variar entre navegadores.
         - month: mes y año.
         - week: número de semana del año.
         NOTA: datetime está obsoleto, no usar.
     -->
+    <h1>Tipos de input: fechas y horas</h1>
     <form>
-        <label>Fecha: <input type="date"></label><br>
-        <label>Hora: <input type="time"></label><br>
-        <label>Fecha y hora local: <input type="datetime-local"></label><br>
-        <label>Mes: <input type="month"></label><br>
-        <label>Semana: <input type="week"></label><br>
+        <label for="fecha">Fecha:</label> <input type="date" id="fecha" name="fecha"><br>
+        <label for="hora">Hora:</label> <input type="time" id="hora" name="hora"><br>
+        <label for="fecha-hora">Fecha y hora local:</label> <input type="datetime-local" id="fecha-hora" name="fecha_hora"><br>
+        <label for="mes">Mes:</label> <input type="month" id="mes" name="mes"><br>
+        <label for="semana">Semana:</label> <input type="week" id="semana" name="semana"><br>
     </form>
 </body>
 </html>

@@ -8,26 +8,30 @@
 <body>
     <!--
         TIPOS DE LISTAS:
-        - ul: lista desordenada (disc, circle, square).
+        - ul: lista desordenada (disc, circle, square mediante CSS).
         - ol: lista ordenada (1, A, a, I, i). Atributos: type, start.
         - dl: lista de definición (dt: término, dd: descripción).
         - Se pueden anidar.
     -->
-    <h1>Lista desordenada (ul)</h1>
-    <ul type="square">
+    <style>
+        .lista-cuadrada { list-style-type: square; }
+    </style>
+    <h1>Listas HTML</h1>
+    <h2>Lista desordenada (ul)</h2>
+    <ul class="lista-cuadrada">
         <li>Pan</li>
         <li>Leche</li>
         <li>Huevos</li>
     </ul>
 
-    <h1>Lista ordenada (ol)</h1>
+    <h2>Lista ordenada (ol)</h2>
     <ol type="I" start="3">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
     </ol>
 
-    <h1>Lista anidada</h1>
+    <h2>Lista anidada</h2>
     <ol>
         <li>HTML
             <ul>
@@ -38,7 +42,7 @@
         <li>CSS</li>
     </ol>
 
-    <h1>Lista de definición (dl)</h1>
+    <h2>Lista de definición (dl)</h2>
     <dl>
         <dt>HTML</dt>
         <dd>Lenguaje de marcado para estructura.</dd>

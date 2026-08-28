@@ -7,8 +7,9 @@
 </head>
 <body>
     <!--
-        GET: los datos se envían en la URL (visible, limitado, para consultas).
-        POST: los datos se envían en el cuerpo de la petición (más seguro, sin límite).
+        GET: los datos se envían en la URL; es apropiado para consultas y permite compartir la dirección.
+        POST: los datos se envían en el cuerpo de la petición; no los cifra ni tiene tamaño ilimitado.
+        Para proteger los datos durante el transporte se necesita HTTPS.
         Atributo method en <form>.
     -->
     <form action="enviar.html" method="post">

@@ -14,25 +14,31 @@
         - progress: progreso de una tarea.
         - textarea: área de texto multilínea.
     -->
-    <form>
+    <h1>Más elementos de formulario</h1>
+    <form action="enviar.html" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Datos personales</legend>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre"><br>
+            <input type="text" id="nombre" name="nombre"><br>
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos">
+            <input type="text" id="apellidos" name="apellidos">
         </fieldset>
 
-        <div><label>Subir archivo: <input type="file"></label></div>
+        <div>
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo">
+        </div>
 
-        <label>Nivel de combustible (meter):</label>
-        <meter value="60" min="0" max="100" low="30" high="75" optimum="50"></meter><br>
+        <label for="combustible">Nivel de combustible (meter):</label>
+        <meter id="combustible" value="60" min="0" max="100" low="30" high="75" optimum="50"></meter><br>
 
-        <label>Progreso de tarea (progress):</label>
-        <progress value="75" max="100"></progress><br>
+        <label for="progreso">Progreso de tarea (progress):</label>
+        <progress id="progreso" value="75" max="100"></progress><br>
 
-        <label>Mensaje (textarea):</label>
-        <textarea name="mensaje" rows="5" cols="30" placeholder="Escribe aquí..."></textarea>
+        <label for="mensaje">Mensaje (textarea):</label>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="30" placeholder="Escribe aquí..."></textarea>
+        <br>
+        <button type="submit">Enviar formulario</button>
     </form>
 </body>
 </html>

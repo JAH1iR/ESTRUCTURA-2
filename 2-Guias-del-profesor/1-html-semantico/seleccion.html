@@ -14,18 +14,18 @@
     -->
     <h1>Lenguajes para diseño web</h1>
     <form>
-        <label>Elige un lenguaje:</label>
-        <select name="lenguajes">
+        <label for="lenguajes">Elige un lenguaje:</label>
+        <select id="lenguajes" name="lenguajes">
             <option value="html">HTML</option>
             <option value="css" selected>CSS</option>
             <option value="javascript">JavaScript</option>
         </select>
         <!-- Con multiple -->
-        <label>Selecciona varios (Ctrl+clic):</label>
-        <select name="varios" multiple size="3">
-            <option>HTML</option>
-            <option>CSS</option>
-            <option>JS</option>
+        <label for="varios">Selecciona varios:</label>
+        <select id="varios" name="varios" multiple size="3">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
         </select>
     </form>
 </body>
