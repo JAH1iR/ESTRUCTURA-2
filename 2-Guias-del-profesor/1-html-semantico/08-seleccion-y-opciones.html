@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>08 - Selección y opciones</title>
+</head>
+<body>
+  <!--
+    Paso 8: selección.
+    select y option permiten elegir entre opciones.
+    datalist ofrece sugerencias al escribir.
+  -->
+
+  <h2>Selecciona una opción</h2>
+  <select>
+    <option value="">Elige una ciudad</option>
+    <option value="bogota">Bogotá</option>
+    <option value="medellin">Medellín</option>
+    <option value="cali">Cali</option>
+  </select>
+
+  <h2>Buscar una opción</h2>
+  <input list="tecnologias" placeholder="Escribe un valor" />
+  <datalist id="tecnologias">
+    <option value="HTML"></option>
+    <option value="CSS"></option>
+    <option value="JavaScript"></option>
+    <option value="React"></option>
+  </datalist>
+</body>
+</html>

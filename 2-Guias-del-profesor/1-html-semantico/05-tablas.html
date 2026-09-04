@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>05 - Tablas</title>
+  <style>
+    table, th, td {
+      border: 1px solid #334155;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Paso 5: tablas.
+    table -> contenedor
+    caption -> título de la tabla
+    thead -> cabecera
+    tbody -> contenido
+    tfoot -> pie
+    th -> encabezado
+    td -> celda normal
+  -->
+
+  <h2>Horario semanal</h2>
+  <table>
+    <caption>Horario de clases</caption>
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:00</td>
+        <td>HTML</td>
+        <td>CSS</td>
+        <td>JS</td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td>React</td>
+        <td>HTML</td>
+        <td>CSS</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Fin del horario</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>

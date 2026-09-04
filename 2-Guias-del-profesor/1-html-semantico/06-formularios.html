@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>06 - Formularios</title>
+</head>
+<body>
+  <!--
+    Paso 6: formularios.
+    form -> contenedor del formulario
+    label -> texto asociado a un campo
+    input -> entrada de datos
+    button -> acción de enviar
+  -->
+
+  <h2>Formulario básico</h2>
+  <form action="enviar.html" method="get">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" />
+    <br /><br />
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" />
+    <br /><br />
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

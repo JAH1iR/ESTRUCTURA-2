@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana",
+    "correo": "ana@curso.com",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Luis",
+    "correo": "luis@curso.com",
+    "activo": false
+  },
+  {
+    "id": 3,
+    "nombre": "Sofía",
+    "correo": "sofia@curso.com",
+    "activo": true
+  }
+]

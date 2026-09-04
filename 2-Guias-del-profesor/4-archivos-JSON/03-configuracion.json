@@ -1,0 +1,12 @@
+{
+  "tema": "JavaScript moderno",
+  "modo": "aprendizaje",
+  "nivel": "básico",
+  "modulos": [
+    "fundamentos",
+    "funciones",
+    "dom",
+    "fetch"
+  ],
+  "activo": true
+}
